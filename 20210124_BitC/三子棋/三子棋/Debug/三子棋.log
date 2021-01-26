@@ -1,0 +1,5 @@
+﻿  Master.c
+  game.c
+C:\Users\75809\Desktop\C\b站张鹏伟c语言\C代码仓库\C-language-programming\20210124_BitC\三子棋\三子棋\game.c(108,20): warning C4020: 'pingju': too many actual parameters
+  Generating Code...
+  三子棋.vcxproj -> C:\Users\75809\Desktop\C\b站张鹏伟c语言\C代码仓库\C-language-programming\20210124_BitC\三子棋\Debug\三子棋.exe
