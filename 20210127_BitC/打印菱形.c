@@ -1,41 +1,50 @@
-#include <stdio.h>
+#include<stdio.h>
 
-void diamond (int n);
+void diamand(int len) {
+	int spaceLine = len - 1;
+	int Star = 1;
+	//上半部分
+	for (int i = 1; i <= len; i++) {
+		//空格
+		for (int j = 0; j < spaceLine; j++) {
+			putchar(' ');
+		}
+		//星号
+		for (int k = 0; k < Star; k++) {
+			putchar('*');
+		}
+		putchar('\n');
+		Star += 2;
+		spaceLine--;
 
-int main(void)
-{
-    int n;
-    scanf("%d", &n);
-    diamond(n);
+	}
+	//调整星星的和空格的数量
+	Star -= 4;
+	spaceLine += 2;
+	
+	for (int i = 1 ;i < len ; i++) {
+		for(int j = 0; j < spaceLine; j++) {
+			putchar(' ');
+		}
+		
+		for(int k = 0; k < Star; k++) {
+			putchar('*');
+		}
+		putchar('\n');
+		Star -= 2;
+		spaceLine++;
+	}
 
-    return 0;
+
 }
 
-void diamond ( int n )
-{
-    int touch = 0;
-    int k = n;
-    int space = n - 1;
-    for (int i =1; i<=n; i++)
-    { 
-        if (i+(i-1) < n)
-        {
-            for (int j = 1; j <= space; j++)
-                printf(" ");
-            for (int j = 1; j <= (i+(i-1)); j++)
-                printf("* ");
-            space -= 2;
-        }
-        else
-        {
-            
-            for (int j = 1; j<= space; j++)
-                printf(" ");
-            for ( int j = k; j > 0; j -- )
-                printf("* ");
-            k -= 2;
-            space += 2;
-        }
-        printf("\n");
-    }
+
+
+int main() {
+
+	int n;
+	scanf("%d", &n);
+	diamand(n);
+
+	return 0;
 }
