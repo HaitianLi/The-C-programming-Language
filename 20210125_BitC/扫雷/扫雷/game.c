@@ -39,16 +39,53 @@ void SetMine(char board[ROWS][COLS], int count) {
 	}
 }
 
-//统计x,y坐标周围有几个雷
-int GetMineCount(char mine[ROWS][COLS], int x, int y) {
-		return mine[x - 1][y] +
-		mine[x - 1][y - 1] +
-		mine[x][y - 1] +
-		mine[x + 1][y - 1] +
-		mine[x + 1][y] +
-		mine[x + 1][y + 1] +
-		mine[x][y + 1] +
-		mine[x - 1][y + 1] - 8 * '0';
+//递归扩展棋盘, 模拟扫雷的点一下出一片的情况.
+void GetMineCount(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y) {
+	if (x >= 1 && x <= ROW && y >= 1 && y <= COL) {
+
+		int count = 
+			mine[x - 1][y] +
+			mine[x - 1][y - 1] +
+			mine[x][y - 1] +
+			mine[x + 1][y - 1] +
+			mine[x + 1][y] +
+			mine[x + 1][y + 1] +
+			mine[x][y + 1] +
+			mine[x - 1][y + 1] - 8 * '0';
+
+		if (count == 0) {
+			show[x][y] = ' ';
+
+			if (show[x - 1][y] == '*') {
+				GetMineCount(mine, show, x - 1, y);
+			}
+			if (show[x - 1][y - 1] == '*') {
+				GetMineCount(mine, show, x - 1, y - 1);
+			}
+			if (show[x][y - 1] == '*') {
+				GetMineCount(mine, show, x, y - 1);
+			}
+			if (show[x + 1][y - 1] == '*') {
+				GetMineCount(mine, show, x + 1, y - 1);
+			}
+			if (show[x + 1][y] == '*') {
+				GetMineCount(mine, show, x + 1, y);
+			}
+			if (show[x + 1][y + 1] == '*') {
+				GetMineCount(mine, show, x + 1, y + 1);
+			}
+			if (show[x][y + 1] == '*') {
+				GetMineCount(mine, show, x, y + 1);
+			}
+			if (show[x - 1][y + 1] == '*') {
+				GetMineCount(mine, show, x - 1, y + 1);
+			}
+
+		}
+		else {
+			show[x][y] = count + '0';
+		}
+	}
 }
 
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int Minecount) {
@@ -70,12 +107,12 @@ void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int Minecount) {
 				break;
 			}
 			else {
-				int count = GetMineCount(mine, x, y);
-				show[x][y] = count + '0';
-				printf("%d %c\n", count, count + '0');
+				GetMineCount(mine, show, x, y);
 				DisplayBoard(show);
-				win++;
 			}
+		}
+		else {
+			printf("输入错误, 请重新输入.\n");
 		}
 
 		if (win == ROW * COL - Minecount) {

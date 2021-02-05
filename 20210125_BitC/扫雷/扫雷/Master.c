@@ -11,15 +11,17 @@ void game() {
 	//创建棋盘对应的数组
 	char mine[ROWS][COLS]; //存放布置好的雷的信息
 	char show[ROWS][COLS]; //存放展示的棋盘
+	
 
 	initBoard(mine,'0');
 	initBoard(show, '*');
 
+
 	//打印棋盘
-	//DisplayBoard(mine);
 	DisplayBoard(show);
 	SetMine(mine, EASY_MODE);
-	//DisplayBoard(show);
+	DisplayBoard(mine);
+	
 
 	//排查雷
 	FindMine(mine, show, EASY_MODE);
