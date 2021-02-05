@@ -14,10 +14,15 @@ void game() {
 
 	initBoard(mine,'0');
 	initBoard(show, '*');
-	DisplayBoard(mine);
+
+	//¥Ú”°∆Â≈Ã
+	//DisplayBoard(mine);
 	DisplayBoard(show);
 	SetMine(mine, EASY_MODE);
-	DisplayBoard(mine);
+	//DisplayBoard(show);
+
+	//≈≈≤È¿◊
+	FindMine(mine, show, EASY_MODE);
 }
 
 int main() {

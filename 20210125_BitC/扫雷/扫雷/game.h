@@ -19,8 +19,10 @@ void DisplayBoard(char board[ROWS][COLS]);
 //布置雷
 void SetMine(char board[ROWS][COLS], int count);
 
-//扫雷
+//排雷
+void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int MineCount);
 
 //排查出的雷的信息
+int GetMineCount(char mine[ROWS][COLS],int x, int y);
 
 
