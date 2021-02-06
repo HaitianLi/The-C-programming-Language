@@ -22,7 +22,5 @@ void SetMine(char board[ROWS][COLS], int count);
 //排雷
 void FindMine(char mine[ROWS][COLS], char show[ROWS][COLS], int MineCount);
 
-//排查出的雷的信息
-//void GetMineCount(char mine[ROWS][COLS], char show[ROWS][COLS], int x, int y);
 
 

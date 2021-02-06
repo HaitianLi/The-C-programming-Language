@@ -18,9 +18,9 @@ void game() {
 
 
 	//¥Ú”°∆Â≈Ã
-	DisplayBoard(show);
 	SetMine(mine, EASY_MODE);
-	DisplayBoard(mine);
+	//DisplayBoard(mine);
+	DisplayBoard(show);
 	
 
 	//≈≈≤È¿◊
