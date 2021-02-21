@@ -25,8 +25,8 @@ int main () {
 
     char input[] = "abcdef";
 
-    printf("abcdef lengh = %d\n", Mystrlen(input));
-    printf("abcdef lengh = %d\n", Strlen(input));
+    printf("abcdef length = %d\n", Mystrlen(input));
+    printf("abcdef length = %d\n", Strlen(input));
 
     return 0;
 }
