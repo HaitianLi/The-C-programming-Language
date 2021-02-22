@@ -1,5 +1,12 @@
+/*
+ * @Author: Haitian Li
+ * @Date: 2021-02-14 15:09:05
+ * @LastEditors: Haitian Li
+ * @LastEditTime: 2021-02-22 21:30:12
+ * @Description: I do not wish to be horny anymore,
+ *               I just want to be happy.
+ */
 #include<stdio.h>
-#include<windows.h>
 
 int main() {
     int num;

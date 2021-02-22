@@ -1,3 +1,11 @@
+/*
+ * @Author: Haitian Li
+ * @Date: 2021-02-14 15:09:05
+ * @LastEditors: Haitian Li
+ * @LastEditTime: 2021-02-22 21:03:42
+ * @Description: I do not wish to be horny anymore,
+ *               I just want to be happy.
+ */
 #include<stdio.h>
 
 int main() {
@@ -7,11 +15,10 @@ int main() {
     int count = 0;
     int c = a ^ b;
     
+    //模仿那个计算1的算法
     while (c) {
-        if (c % 2 == 1) {
-            count++;
-        }
-        c >>= 1;
+        c = c & (c - 1);
+        count++;
     }
     
     printf("%d\n", count);
