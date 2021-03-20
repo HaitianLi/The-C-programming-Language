@@ -2,13 +2,12 @@
  * @Author: Haitian Li
  * @Date: 2021-03-12 18:29:24
  * @LastEditors: Haitian Li
- * @LastEditTime: 2021-03-14 10:47:20
+ * @LastEditTime: 2021-03-15 05:46:30
  * @Description: I do not wish to be horny anymore,
  *               I just want to be happy.
  */
 
 #include <stdio.h>
-#include <errno.h>
 
 
 
