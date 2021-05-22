@@ -1,7 +1,7 @@
 BRANCHNAME=Yourname_branch2
 REMOTE=Your_remote_name
 COMMIT="your message"
-URL=https://github.com/HaitianLi/The-C-programming-Language.git
+URL="https://github.com/HaitianLi/The-C-programming-Language.git"
 
 branch:
 	git checkout -b $(BRANCHNAME)
