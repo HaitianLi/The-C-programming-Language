@@ -1,12 +1,12 @@
-BRANCHNAME=Yourname_branch5
-REMOTE=Your_remote_name3
+BRANCHNAME=Yourname_branch6
+REMOTE=Your_remote_name4
 COMMIT="your message"
 URL="https://github.com/HaitianLi/The-C-programming-Language.git"
 ##
 
 branch:
 	git checkout -b $(BRANCHNAME)
-	# git push origin $(BRANCHNAME)
+	git push -u origin $(BRANCHNAME)
 	# git remote add $(REMOTE) $(BRANCHNAME)
 	# git push --set-upstream origin $(BRANCHNAME)
 	####
@@ -14,5 +14,6 @@ branch:
 push:
 	git add .
 	git commit -m $(COMMIT)
-	git push origin $(BRANCHNAME)
+	git push
 
+####
