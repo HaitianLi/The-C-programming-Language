@@ -1,7 +1,7 @@
 BRANCHNAME=Yourname_branch6
 REMOTE=Your_remote_name4
 COMMIT="your message"
-URL="https://github.com/HaitianLi/The-C-programming-Language.git"
+
 ##
 
 branch:
@@ -16,4 +16,4 @@ push:
 	git commit -m $(COMMIT)
 	git push
 
-####
+####make some new change
