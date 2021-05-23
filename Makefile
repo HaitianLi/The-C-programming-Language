@@ -6,6 +6,7 @@ COMMIT="your message"
 
 branch:
 	echo "Makefile" | cat > .gitignore
+	echo "*.bb" | cat >> .gitignore
 	git checkout -b $(BRANCHNAME)
 	git push -u origin $(BRANCHNAME)
 	# git remote add $(REMOTE) $(BRANCHNAME)
