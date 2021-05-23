@@ -12,9 +12,12 @@ branch:
 	# git remote add $(REMOTE) $(BRANCHNAME)
 	# git push --set-upstream origin $(BRANCHNAME)
 	####
+	
+start:
+	git merge origin/main
 
 push:
-	git fetch origin
+
 	git add .
 	git commit -m $(COMMIT)
 	git push
